@@ -1,0 +1,9 @@
+---
+##### Install zabbix-agent
+  - name: ping hosts
+    ping:
+
+### Starting zabbix-agent
+  - name: Make sure a service is started
+    systemd: state=started name=zabbix-agent
+    become: yes
